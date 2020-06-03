@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Source+Code+Pro&display=swap");
+
+html {
+  font-family: "Source Code Pro", monospace;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Source Code Pro", monospace;
+  }
+}
