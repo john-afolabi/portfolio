@@ -6,8 +6,9 @@ import dimensions from "styles/dimensions"
 const ProjectCardContainer = styled("div")`
   display: flex;
   flex-direction: row;
+  flex-basis: auto;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 4em;
   transition: all 150ms ease-in-out;
   text-decoration: none;
@@ -18,9 +19,12 @@ const ProjectCardContainer = styled("div")`
   }
 `
 const ProjectSection = () => (
-  <ProjectCardContainer>
-    <ProjectCard />
-  </ProjectCardContainer>
+  <>
+    <h3>Here is some of my work...</h3>
+    <ProjectCardContainer>
+      <ProjectCard />
+    </ProjectCardContainer>
+  </>
 )
 
 export default ProjectSection
