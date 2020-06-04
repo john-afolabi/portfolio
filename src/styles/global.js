@@ -32,6 +32,10 @@ const globalStyles = css`
         color: white;
       }
     }
+
+    a {
+      text-decoration: none;
+    }
   }
 
   /*
