@@ -8,13 +8,15 @@ import {
   faNode,
   faHtml5,
   faCss3,
-  faYarn,
   faSass,
   faJs,
   faPython,
+  faLess,
 } from "@fortawesome/free-brands-svg-icons"
+import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { projects } from "projects"
 
 const Card = styled("div")`
   max-height: 700px;
@@ -38,10 +40,14 @@ const Title = styled("h3")`
 const Links = styled("div")`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   @media (max-width: ${dimensions.maxwidthMobile}px) {
     flex-direction: column;
+  }
+
+  a {
+    width: 30%;
   }
 `
 const Icons = styled(FontAwesomeIcon)`
@@ -98,116 +104,49 @@ const ProjectCard = () => {
       }
     }
   `)
+
+  const stackToIcon = {
+    react: faReact,
+    node: faNode,
+    html: faHtml5,
+    css: faCss3,
+    sass: faSass,
+    js: faJs,
+    python: faPython,
+    less: faLess,
+    sql: faDatabase,
+  }
+
   return (
     <>
-      <Card>
-        <CardImageContainer>
-          <Img fixed={data.placeholderImage.childImageSharp.fixed} />
-        </CardImageContainer>
-        <CardContent>
-          <Title>My first project</Title>
-          <Links>
-            <a href="https://google.com">Hosted Application</a>
-            <a href="https://google.com">Backend Github</a>
-            <a href="https://google.com">FrontEnd Github</a>
-          </Links>
+      {projects.map(project => {
+        return (
+          <Card key={project.title}>
+            <CardImageContainer>
+              <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+            </CardImageContainer>
+            <CardContent>
+              <Title>{project.title}</Title>
+              <Links>
+                {project.links.hosted ? (
+                  <a href={project.links.hosted}>Hosted Application</a>
+                ) : null}
+                {project.links.frontend ? (
+                  <a href={project.links.frontend}>Frontend Github</a>
+                ) : null}
+                {project.links.backend ? (
+                  <a href={project.links.backend}>Backend Github</a>
+                ) : null}
+              </Links>
+              {project.stack.map(stack => {
+                return <Icons icon={stackToIcon[stack]} />
+              })}
 
-          <Icons icon={faReact} />
-          <Icons icon={faNode} />
-          <Icons icon={faHtml5} />
-          <Icons icon={faCss3} />
-          <Icons icon={faYarn} />
-          <Icons icon={faSass} />
-          <Icons icon={faJs} />
-          <Icons icon={faPython} />
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-            pellentesque nisi. In finibus, mi ut congue tincidunt, purus
-          </p>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardImageContainer>
-          <Img fixed={data.placeholderImage.childImageSharp.fixed} />
-        </CardImageContainer>
-        <CardContent>
-          <Title>My first project</Title>
-          <Links>
-            <a href="https://google.com">Hosted Application</a>
-            <a href="https://google.com">Backend Github</a>
-            <a href="https://google.com">FrontEnd Github</a>
-          </Links>
-
-          <Icons icon={faReact} />
-          <Icons icon={faNode} />
-          <Icons icon={faHtml5} />
-          <Icons icon={faCss3} />
-          <Icons icon={faYarn} />
-          <Icons icon={faSass} />
-          <Icons icon={faJs} />
-          <Icons icon={faPython} />
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-            pellentesque nisi. In finibus, mi ut congue tincidunt, purus
-          </p>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardImageContainer>
-          <Img fixed={data.placeholderImage.childImageSharp.fixed} />
-        </CardImageContainer>
-        <CardContent>
-          <Title>My first project</Title>
-          <Links>
-            <a href="https://google.com">Hosted Application</a>
-            <a href="https://google.com">Backend Github</a>
-            <a href="https://google.com">FrontEnd Github</a>
-          </Links>
-
-          <Icons icon={faReact} />
-          <Icons icon={faNode} />
-          <Icons icon={faHtml5} />
-          <Icons icon={faCss3} />
-          <Icons icon={faYarn} />
-          <Icons icon={faSass} />
-          <Icons icon={faJs} />
-          <Icons icon={faPython} />
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-            pellentesque nisi. In finibus, mi ut congue tincidunt, purus
-          </p>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardImageContainer>
-          <Img fixed={data.placeholderImage.childImageSharp.fixed} />
-        </CardImageContainer>
-        <CardContent>
-          <Title>My first project</Title>
-          <Links>
-            <a href="https://google.com">Hosted Application</a>
-            <a href="https://google.com">Backend Github</a>
-            <a href="https://google.com">FrontEnd Github</a>
-          </Links>
-
-          <Icons icon={faReact} />
-          <Icons icon={faNode} />
-          <Icons icon={faHtml5} />
-          <Icons icon={faCss3} />
-          <Icons icon={faYarn} />
-          <Icons icon={faSass} />
-          <Icons icon={faJs} />
-          <Icons icon={faPython} />
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-            pellentesque nisi. In finibus, mi ut congue tincidunt, purus
-          </p>
-        </CardContent>
-      </Card>
+              <p>{project.desc}</p>
+            </CardContent>
+          </Card>
+        )
+      })}
     </>
   )
 }
