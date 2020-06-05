@@ -27,7 +27,7 @@ export const projects = [
 
   {
     title: "Anywhere Fitness",
-    stack: ["react", "js", "html", "less"],
+    stack: ["react", "js", "html", "bootstrap"],
     links: {
       hosted: "https://anywherefitness.now.sh/",
       backend: "",

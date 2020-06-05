@@ -12,6 +12,7 @@ import {
   faJs,
   faPython,
   faLess,
+  faBootstrap,
 } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { useStaticQuery, graphql } from "gatsby"
@@ -62,6 +63,10 @@ const Icons = styled(FontAwesomeIcon)`
   color: ${colors.blue700};
   font-size: 5em;
   padding-right: 0.5em;
+
+  &:hover {
+    color: ${colors.blue900};
+  }
 `
 const CardImageContainer = styled("div")`
   background: ${colors.grey200};
@@ -123,6 +128,7 @@ const ProjectCard = () => {
     python: faPython,
     less: faLess,
     sql: faDatabase,
+    bootstrap: faBootstrap,
   }
 
   return (
