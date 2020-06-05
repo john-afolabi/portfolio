@@ -29,6 +29,10 @@ const Main = styled("div")`
         color: white;
         background-color: ${colors.blue700};
         padding: 0.2em;
+
+        &:hover {
+          background-color: ${colors.blue900};
+        }
       }
     }
   }
@@ -78,6 +82,7 @@ const IntroSection = () => (
         </p>
       </div>
     </Main>
+    <hr />
   </>
 )
 

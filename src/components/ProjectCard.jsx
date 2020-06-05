@@ -48,11 +48,19 @@ const Links = styled("div")`
 
   a {
     width: 30%;
+    text-decoration: none;
+    color: white;
+    background-color: ${colors.blue700};
+    padding: 0.2em;
+
+    &:hover {
+      background-color: ${colors.blue900};
+    }
   }
 `
 const Icons = styled(FontAwesomeIcon)`
-  color: ${colors.blue400};
-  font-size: 3em;
+  color: ${colors.blue700};
+  font-size: 5em;
   padding-right: 0.5em;
 `
 const CardImageContainer = styled("div")`
@@ -128,15 +136,27 @@ const ProjectCard = () => {
             <CardContent>
               <Title>{project.title}</Title>
               <Links>
-                {project.links.hosted ? (
-                  <a href={project.links.hosted}>Hosted Application</a>
-                ) : null}
-                {project.links.frontend ? (
-                  <a href={project.links.frontend}>Frontend Github</a>
-                ) : null}
-                {project.links.backend ? (
-                  <a href={project.links.backend}>Backend Github</a>
-                ) : null}
+                <p>
+                  {project.links.hosted ? (
+                    <a href={project.links.hosted}>
+                      Hosted <br /> Application
+                    </a>
+                  ) : null}
+                </p>
+                <p>
+                  {project.links.frontend ? (
+                    <a href={project.links.frontend}>
+                      Frontend <br /> Github
+                    </a>
+                  ) : null}
+                </p>
+                <p>
+                  {project.links.backend ? (
+                    <a href={project.links.backend}>
+                      Backend <br /> Github
+                    </a>
+                  ) : null}
+                </p>
               </Links>
               {project.stack.map(stack => {
                 return <Icons icon={stackToIcon[stack]} />
