@@ -46,6 +46,13 @@ const IntroText = styled("div")`
   @media (max-width: ${dimensions.maxwidthMobile}px) {
     max-width: 100%;
   }
+
+  p {
+    span {
+      font-weight: 700;
+      color: ${colors.blue700};
+    }
+  }
 `
 
 const IntroSection = () => (
@@ -53,13 +60,12 @@ const IntroSection = () => (
     <Main>
       <IntroText>
         <hr />
-        {/* <h3>Hi _____</h3> */}
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-          pellentesque nisi. In finibus, mi ut congue tincidunt, purus erat
-          rutrum tortor, sit amet porttitor felis felis sit amet nibh. Sed ac
-          tempus justo. Praesent quis tellus leo. Donec ultrices mollis
-          malesuada
+          Hi ___ I am John Afolabi a <span>Sofware Engineer</span> based in{" "}
+          <span>Lagos, Nigeria.</span> I have always been obessed about tech and
+          how things work on a fundamental level which led me to{" "}
+          <span>writing code</span>. I enjoy building stuff that works on my
+          free time. Feel free to reach out!
         </p>
       </IntroText>
       <div>
