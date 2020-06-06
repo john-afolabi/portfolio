@@ -104,19 +104,34 @@ const CardImageContainer = styled("div")`
 
 const ProjectCard = () => {
   const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "ja-logo.png" }) {
-        childImageSharp {
-          fixed(width: 300) {
-            ...GatsbyImageSharpFixed
-          }
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+    query MyQuery {
+      allFile(
+        filter: {
+          extension: { regex: "/jpg/" }
+          relativeDirectory: { eq: "projects" }
+        }
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                base64
+                originalName
+                aspectRatio
+                src
+                srcSet
+              }
+            }
           }
         }
       }
     }
   `)
+
+  const images = []
+  data.allFile.edges.forEach(node => {
+    images.push(node.node.childImageSharp)
+  })
 
   const stackToIcon = {
     react: faReact,
@@ -136,9 +151,19 @@ const ProjectCard = () => {
       {projects.map(project => {
         return (
           <Card key={project.title}>
-            <CardImageContainer>
-              <Img fixed={data.placeholderImage.childImageSharp.fixed} />
-            </CardImageContainer>
+            {/* <CardImageContainer> */}
+            {console.log(
+              images.find(image => image.fluid.originalName === project.image)
+                .fluid
+            )}
+
+            <Img
+              fluid={
+                images.find(image => image.fluid.originalName === project.image)
+                  .fluid
+              }
+            />
+            {/* </CardImageContainer> */}
             <CardContent>
               <Title>{project.title}</Title>
               <Links>

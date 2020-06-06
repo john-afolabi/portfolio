@@ -9,7 +9,7 @@ export const projects = [
     },
     desc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis pellentesque nisi. In finibus, mi ut congue tincidunt, purus",
-    image: "",
+    image: "hackhunt.jpg",
   },
 
   {
@@ -22,7 +22,7 @@ export const projects = [
     },
     desc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis pellentesque nisi. In finibus, mi ut congue tincidunt, purus",
-    image: "",
+    image: "mud.jpg",
   },
 
   {
@@ -35,7 +35,7 @@ export const projects = [
     },
     desc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis pellentesque nisi. In finibus, mi ut congue tincidunt, purus",
-    image: "",
+    image: "anywhere fitness.jpg",
   },
 
   {
@@ -48,6 +48,6 @@ export const projects = [
     },
     desc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis pellentesque nisi. In finibus, mi ut congue tincidunt, purus",
-    image: "",
+    image: "foodtrackr.jpg",
   },
 ]
