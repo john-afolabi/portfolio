@@ -96,11 +96,8 @@ const ProjectCard = () => {
           node {
             childImageSharp {
               fluid {
-                base64
+                ...GatsbyImageSharpFluid
                 originalName
-                aspectRatio
-                src
-                srcSet
               }
             }
           }
