@@ -20,7 +20,7 @@ const ProjectCardContainer = styled("div")`
 `
 const ProjectSection = () => (
   <>
-    <h3>Here is some of my work...</h3>
+    <h3>Here is some project I have worked on...</h3>
     <ProjectCardContainer>
       <ProjectCard />
     </ProjectCardContainer>
