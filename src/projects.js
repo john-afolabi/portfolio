@@ -8,9 +8,10 @@ export const projects = [
       frontend: "https://github.com/Labs-EU4/hackathon-portal-client",
     },
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis pellentesque nisi. In finibus, mi ut congue tincidunt, purus",
+      "Hackhunt is a webapp for organizing, finding and joining hackathons. ",
     image: "hackhunt.jpg",
   },
+  // <b>I worked on improving the test coverage, redesigning the ui and implemeting new endpoints on the backend</b>
 
   {
     title: "MUD",
@@ -21,7 +22,7 @@ export const projects = [
       frontend: "https://github.com/cseu4-victor-bw1/team2_frontend",
     },
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis pellentesque nisi. In finibus, mi ut congue tincidunt, purus",
+      "A mud game with different room built with HTML Canvas API an django on the backend",
     image: "mud.jpg",
   },
 
@@ -33,8 +34,7 @@ export const projects = [
       backend: "",
       frontend: "https://github.com/BW-Anywhere-Fitness-Nov-18-22/front-end",
     },
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis pellentesque nisi. In finibus, mi ut congue tincidunt, purus",
+    desc: "A simple webapp for scheduling and managing fitness classes",
     image: "anywhere fitness.jpg",
   },
 
@@ -47,7 +47,7 @@ export const projects = [
       frontend: "https://github.com/Build-Week-FoodTruck-TrackR/Marketing",
     },
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis pellentesque nisi. In finibus, mi ut congue tincidunt, purus",
+      "An app for mobile devices to keep track of food trucks in your area. I worked on the marketing page for this.",
     image: "foodtrackr.jpg",
   },
 ]
