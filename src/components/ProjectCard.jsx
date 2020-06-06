@@ -28,6 +28,13 @@ const Card = styled("div")`
   &:hover {
     box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.1);
     transition: all 150ms ease-in-out;
+
+    div {
+      div {
+        opacity: 1;
+        transition: all 150ms ease-in-out;
+      }
+    }
   }
 `
 
@@ -68,38 +75,12 @@ const Icons = styled(FontAwesomeIcon)`
     color: ${colors.blue900};
   }
 `
-const CardImageContainer = styled("div")`
-  background: ${colors.grey200};
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden;
-  position: relative;
-  padding-left: 2em;
-  padding-right: 2em;
 
-  &:before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: ${colors.blue500};
-    mix-blend-mode: multiply;
-    opacity: 0;
-    transition: all 150ms ease-in-out;
-  }
-
-  img {
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.04);
-
-    @media (max-width: ${dimensions.maxwidthTablet}px) {
-      max-width: 300px;
-    }
-  }
+const ProjectImage = styled(Img)`
+  opacity: 0.5;
+`
+const ProjectImageContainer = styled("div")`
+  background-color: ${colors.blue300};
 `
 
 const ProjectCard = () => {
@@ -151,19 +132,15 @@ const ProjectCard = () => {
       {projects.map(project => {
         return (
           <Card key={project.title}>
-            {/* <CardImageContainer> */}
-            {console.log(
-              images.find(image => image.fluid.originalName === project.image)
-                .fluid
-            )}
-
-            <Img
-              fluid={
-                images.find(image => image.fluid.originalName === project.image)
-                  .fluid
-              }
-            />
-            {/* </CardImageContainer> */}
+            <ProjectImageContainer>
+              <ProjectImage
+                fluid={
+                  images.find(
+                    image => image.fluid.originalName === project.image
+                  ).fluid
+                }
+              />
+            </ProjectImageContainer>
             <CardContent>
               <Title>{project.title}</Title>
               <Links>
