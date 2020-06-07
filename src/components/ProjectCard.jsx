@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-import dimensions from "styles/dimensions"
 import colors from "styles/colors"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -49,10 +48,6 @@ const Links = styled("div")`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  @media (max-width: ${dimensions.maxwidthMobile}px) {
-    flex-direction: column;
-  }
 
   a {
     width: 30%;
