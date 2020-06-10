@@ -14,7 +14,6 @@ import {
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
-import { useStaticQuery, graphql } from "gatsby"
 import { projects } from "projects"
 
 const Card = styled("div")`
@@ -72,33 +71,6 @@ const Icons = styled(FontAwesomeIcon)`
 const ProjectImageContainer = styled("div")``
 
 const ProjectCard = () => {
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      allFile(
-        filter: {
-          extension: { regex: "/jpg/" }
-          relativeDirectory: { eq: "projects" }
-        }
-      ) {
-        edges {
-          node {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-                originalName
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const images = []
-  data.allFile.edges.forEach(node => {
-    images.push(node.node.childImageSharp)
-  })
-
   const stackToIcon = {
     react: faReact,
     node: faNode,
