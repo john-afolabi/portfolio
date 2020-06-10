@@ -9,6 +9,9 @@ import dimensions from "styles/dimensions"
 import Footer from "components/Footer"
 import Header from "components/Header"
 import "styles/fonts.scss"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false
 
 const LayoutContainer = styled.div`
   max-width: ${dimensions.maxwidthDesktop}px;
