@@ -13,10 +13,10 @@ export const projects = [
       frontend: "https://github.com/Labs-EU4/hackathon-portal-client",
     },
     desc:
-      "Hackhunt is a webapp for organizing, finding and joining hackathons. ",
+      "HackHunt is a webapp for organizing, finding and joining hackathons. ",
     video: HackHunt,
   },
-  // <b>I worked on improving the test coverage, redesigning the ui and implemeting new endpoints on the backend</b>
+  // <b>I worked on improving the test coverage, redesigning the ui and implementing new endpoints on the backend</b>
 
   {
     title: "MUD",

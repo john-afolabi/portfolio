@@ -61,9 +61,9 @@ const IntroSection = () => (
       <IntroText>
         <hr />
         <p>
-          Hi ___ I am John Afolabi a <span>Sofware Engineer</span> based in{" "}
-          <span>Lagos, Nigeria.</span> I have always been obessed about tech and
-          how things work on a fundamental level which led me to{" "}
+          Hi ___ I am John Afolabi a <span>Software Engineer</span> based in{" "}
+          <span>Lagos, Nigeria.</span> I have always been obsessed about tech
+          and how things work on a fundamental level which led me to{" "}
           <span>writing code</span>. I enjoy building stuff that works on my
           free time. Feel free to reach out!
         </p>
