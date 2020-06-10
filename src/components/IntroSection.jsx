@@ -72,7 +72,7 @@ const IntroSection = () => (
         <hr />
         <p>
           <FontAwesomeIcon icon={faTwitter} />{" "}
-          <a href="https://twitter.com/Janonymousone">Twitter</a>
+          <a href="https://twitter.com/_john_afolabi">Twitter</a>
         </p>
         <p>
           <FontAwesomeIcon icon={faLinkedin} />{" "}
