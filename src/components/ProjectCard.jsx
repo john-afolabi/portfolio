@@ -119,7 +119,9 @@ const ProjectCard = () => {
         return (
           <Card key={project.title}>
             <ProjectImageContainer>
-              <img src={project.image} width="100%" alt={project.title} />
+              <video muted autoPlay loop width="100%" title={project.title}>
+                <source src={project.video} type="video/webm" />
+              </video>
             </ProjectImageContainer>
             <CardContent>
               <Title>{project.title}</Title>

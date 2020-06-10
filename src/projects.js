@@ -1,7 +1,7 @@
-import HackHunt from "images/projects/hackhunt.gif"
-import Mud from "images/projects/mud.gif"
-import AnywhereFitness from "images/projects/anywhere fitness.gif"
-import FoodTrackr from "images/projects/foodtrackr.gif"
+import HackHunt from "images/projects/hackhunt.webm"
+import Mud from "images/projects/mud.webm"
+import AnywhereFitness from "images/projects/anywhere fitness.webm"
+import FoodTrackr from "images/projects/foodtrackr.webm"
 
 export const projects = [
   {
@@ -14,7 +14,7 @@ export const projects = [
     },
     desc:
       "Hackhunt is a webapp for organizing, finding and joining hackathons. ",
-    image: HackHunt,
+    video: HackHunt,
   },
   // <b>I worked on improving the test coverage, redesigning the ui and implemeting new endpoints on the backend</b>
 
@@ -28,7 +28,7 @@ export const projects = [
     },
     desc:
       "A mud game with different room built with HTML Canvas API an django on the backend",
-    image: Mud,
+    video: Mud,
   },
 
   {
@@ -40,7 +40,7 @@ export const projects = [
       frontend: "https://github.com/BW-Anywhere-Fitness-Nov-18-22/front-end",
     },
     desc: "A simple webapp for scheduling and managing fitness classes",
-    image: AnywhereFitness,
+    video: AnywhereFitness,
   },
 
   {
@@ -53,6 +53,6 @@ export const projects = [
     },
     desc:
       "An app for mobile devices to keep track of food trucks in your area. I worked on the marketing page for this.",
-    image: FoodTrackr,
+    video: FoodTrackr,
   },
 ]
