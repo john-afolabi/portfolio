@@ -135,14 +135,14 @@ const ProjectCard = () => {
                 <p>
                   {project.links.frontend ? (
                     <a href={project.links.frontend}>
-                      Frontend <br /> Github
+                      Frontend <br /> GitHub
                     </a>
                   ) : null}
                 </p>
                 <p>
                   {project.links.backend ? (
                     <a href={project.links.backend}>
-                      Backend <br /> Github
+                      Backend <br /> GitHub
                     </a>
                   ) : null}
                 </p>
