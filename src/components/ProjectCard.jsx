@@ -15,7 +15,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import { projects } from "projects"
 
 const Card = styled("div")`
@@ -62,8 +61,7 @@ const Links = styled("div")`
   }
 `
 const Icons = styled(FontAwesomeIcon)`
-  color: ${colors.blue700};
-  font-size: 5em;
+  font-size: 3em;
   padding-right: 0.5em;
 
   &:hover {
@@ -71,12 +69,7 @@ const Icons = styled(FontAwesomeIcon)`
   }
 `
 
-const ProjectImage = styled(Img)`
-  opacity: 0.5;
-`
-const ProjectImageContainer = styled("div")`
-  background-color: ${colors.blue300};
-`
+const ProjectImageContainer = styled("div")``
 
 const ProjectCard = () => {
   const data = useStaticQuery(graphql`
@@ -125,13 +118,9 @@ const ProjectCard = () => {
         return (
           <Card key={project.title}>
             <ProjectImageContainer>
-              <ProjectImage
-                fluid={
-                  images.find(
-                    image => image.fluid.originalName === project.image
-                  ).fluid
-                }
-              />
+              <video muted autoPlay loop width="100%" title={project.title}>
+                <source src={project.video} type="video/webm" />
+              </video>
             </ProjectImageContainer>
             <CardContent>
               <Title>{project.title}</Title>
