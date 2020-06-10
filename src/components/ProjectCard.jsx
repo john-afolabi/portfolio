@@ -61,8 +61,7 @@ const Links = styled("div")`
   }
 `
 const Icons = styled(FontAwesomeIcon)`
-  color: ${colors.blue700};
-  font-size: 5em;
+  font-size: 3em;
   padding-right: 0.5em;
 
   &:hover {
